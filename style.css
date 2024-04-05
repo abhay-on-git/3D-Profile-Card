@@ -1,0 +1,171 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* GENERAL STYLES */
+
+body{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(to bottom , #491de8 , #cb8361);
+}
+
+.profile_card{
+    width: 350px;
+    height: 500px;
+    perspective: 900px;
+}
+
+.profile_inner_card{
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.profile_card:hover .profile_inner_card{
+    transform: rotateY(180deg);
+}
+
+.profile_front_card,
+.profile_back_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 24px ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.profile_front_card{
+    background-image: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWwlMjBtYW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.profile_back_card{
+    transform: rotateY(180deg);
+    background-color: white;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tittle{
+    position: absolute;
+    display: flex;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    letter-spacing: 0.1em;
+    text-shadow: 0 3px 8px #000;
+}
+ 
+.tittle span{
+    font-weight:bold;
+}
+
+.profile_back_card .profile_pic{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.job{
+    font-size: 1.2rem;
+    margin: 0.25em 0;
+}
+
+.social{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 15px;
+   margin-bottom: 20px;
+}
+
+.social span img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.25rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out; 
+}
+
+.social img:hover{
+    transform: scale(1.3);
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.btn{
+    color: white;
+    background-color: #5243ed;
+    width: 90px;
+    padding: 7px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    margin:0 0.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #491de8;
+    transition: 0.3s;
+}
+
+.activity{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.activity span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5p;
+}
+
+.activity span img{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 0 0.25rem;
+}
